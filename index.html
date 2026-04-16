@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Modern Neon Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <header class="score-board">
+            <div class="score-box">
+                <span>SCORE</span>
+                <div id="current-score">0</div>
+            </div>
+            <div class="score-box">
+                <span>HIGH SCORE</span>
+                <div id="high-score">0</div>
+            </div>
+        </header>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            
+            <div id="overlay" class="overlay">
+                <h1 id="overlay-title">SNAKE</h1>
+                <p id="overlay-text">Use Arrow Keys, WASD, or Buttons to move.</p>
+                <button id="start-btn">START GAME</button>
+            </div>
+        </div>
+
+        <div class="d-pad">
+            <div class="d-pad-row">
+                <button class="control-btn" id="btn-up">▲</button>
+            </div>
+            <div class="d-pad-row">
+                <button class="control-btn" id="btn-left">◀</button>
+                <button class="control-btn" id="btn-down">▼</button>
+                <button class="control-btn" id="btn-right">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
