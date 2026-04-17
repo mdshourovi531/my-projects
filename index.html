@@ -2,25 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>Modern Neon Snake</title>
+    <title>Realistic Swipe Snake</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="game-container">
+        <button id="info-btn" class="info-icon">?</button>
+        
         <header class="score-board">
-            <div class="score-box">
-                <span>SCORE</span>
-                <div id="current-score">0</div>
-            </div>
-            <div class="score-box">
-                <span>HIGH SCORE</span>
-                <div id="high-score">0</div>
-            </div>
+            <div class="score-box"><span>SCORE</span><div id="current-score">0</div></div>
+            <div class="score-box"><span>HIGH SCORE</span><div id="high-score">0</div></div>
         </header>
 
         <div class="canvas-wrapper">
@@ -28,19 +21,21 @@
             
             <div id="overlay" class="overlay">
                 <h1 id="overlay-title">SNAKE</h1>
-                <p id="overlay-text">Use Arrow Keys, WASD, or Buttons to move.</p>
+                <p id="overlay-text">Swipe to Move or Use Arrow Keys</p>
                 <button id="start-btn">START GAME</button>
             </div>
-        </div>
 
-        <div class="d-pad">
-            <div class="d-pad-row">
-                <button class="control-btn" id="btn-up">▲</button>
-            </div>
-            <div class="d-pad-row">
-                <button class="control-btn" id="btn-left">◀</button>
-                <button class="control-btn" id="btn-down">▼</button>
-                <button class="control-btn" id="btn-right">▶</button>
+            <div id="inst-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2>HOW TO PLAY</h2>
+                    <ul class="inst-list">
+                        <li><span class="dot food"></span> <b>Food:</b> +10 Pts | Grows 1</li>
+                        <li><span class="dot boost"></span> <b>Boost:</b> +50 Pts | Grows 2</li>
+                        <li><span class="dot boom"></span> <b>Boom:</b> -70 Pts | Watch out!</li>
+                    </ul>
+                    <p><b>Mobile:</b> Swipe in the direction you want to turn.<br><b>Desktop:</b> WASD or Arrows.</p>
+                    <button id="close-inst">GOT IT</button>
+                </div>
             </div>
         </div>
     </div>
